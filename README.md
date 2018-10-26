@@ -2,6 +2,22 @@
 
 ![Generated images from noise on LFW ds after 300 epochs](images/lfw-300epochs.gif)
 
+[EDIT] HOW TO RUN ON GOOGLE COLABORATORY
+mount your google drive into colaboratory
+cd to working dir of your choice IN you google drive
+create notebook ofc
+"!pip3 install torch torchvision"
+"!git clone "my_fork"
+Example for folder sturcture of dataset:
+[...]dcgan/dataset/portrait      #dcgan dir is the git clone of this repo here
+portrait dir contains RGB images
+How to run dcgan:
+!python main.py --dataset folder --dataroot ./dataset --outf trained_models --cuda --ngpu 1 --niter 20
+--dataset folder -> states that the dataset to look for is an actual folder
+--dataroot ./dataset -> shows where the dataset is. this dataset is your own dataset. Acutally I put a subfolder "portrait" into "/dataset"
+
+
+
 This project implements the paper [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](http://arxiv.org/abs/1511.06434) from a porting of [pytorch/examples/dcgan](https://github.com/pytorch/examples/tree/master/dcgan) making it usables on [FloydHub](https://www.floydhub.com/).
 
 The implementation is very close to the Torch implementation [dcgan.torch](https://github.com/soumith/dcgan.torch).
